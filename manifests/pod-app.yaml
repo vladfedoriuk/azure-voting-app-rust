@@ -7,14 +7,14 @@ metadata:
   name: azure-voting-app
 spec:
   containers:
-  - env:
-    - name: DATABASE_SERVER
-      value: 10.244.0.27
-    - name: DATABASE_PASSWORD
-      value: mypassword
-    image: acrudavoz.azurecr.io/cnny2023/azure-voting-app-rust:ca4
-    name: azure-voting-app
-    resources: {}
+    - env:
+        - name: DATABASE_SERVER
+          value: 10.244.0.11
+        - name: DATABASE_PASSWORD
+          value: mypassword
+      image: acr6m6pvk.azurecr.io/cnny2023/azure-voting-app-rust:latest
+      name: azure-voting-app
+      resources: {}
   dnsPolicy: ClusterFirst
   restartPolicy: Always
 status: {}

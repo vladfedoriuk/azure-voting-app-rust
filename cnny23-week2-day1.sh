@@ -1,5 +1,5 @@
 ## Setup Environment
-az deployment sub create --template-file ./deploy/main.bicep --location eastus
+az deployment sub create --template-file ./deploy/main.bicep --location northeurope
 AcrName=(az deployment sub show --name main --query 'properties.outputs.acr_name.value' -o tsv)
 AksName=(az deployment sub show --name main --query 'properties.outputs.aks_name.value' -o tsv)
 ResourceGroup=(az deployment sub show --name main --query 'properties.outputs.resource_group_name.value' -o tsv)

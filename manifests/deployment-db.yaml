@@ -18,12 +18,12 @@ spec:
         app: azure-voting-db
     spec:
       containers:
-      - image: postgres:15.0-alpine
-        name: postgres
-        ports:
-        - containerPort: 5432
-        env:
-        - name: POSTGRES_PASSWORD
-          value: "mypassword"
-        resources: {}
+        - image: postgres:15.0-alpine
+          name: postgres
+          ports:
+            - containerPort: 5432
+          env:
+            - name: POSTGRES_PASSWORD
+              value: "mypassword"
+          resources: {}
 status: {}
